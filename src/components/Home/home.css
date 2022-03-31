@@ -5,6 +5,7 @@
     height: 100%;
     max-width: 2000px;
     margin: 0 auto;
+
 }
 
 nav{
@@ -84,7 +85,7 @@ nav{
 .navbar-logo{
     font-weight: 400;
     letter-spacing: 1px;
-    margin-top: .7rem;
+    margin-top: .8rem;
 }
 
 .menu-icon{
@@ -135,6 +136,7 @@ display: none;
 .home_section_description{
     font-weight: 400;
     margin-right: 1em;
+    font-family: 'Poppins', sans-serif;
   
 }
 
@@ -192,13 +194,14 @@ button:hover{
     font-size: 50px;
     border-left: rgb(202, 82, 82) 4px solid;
     padding-left: 10px;
+    font-family: 'Varela Round', sans-serif;
 }
 .about_section-description{
     font-weight: 400;
     width: 85%;
     margin-top: -.5em;
     letter-spacing: 1px;
-
+    font-family: 'Poppins', sans-serif;
 }
 
 .about_section_content-container{
@@ -224,7 +227,8 @@ button:hover{
 .tech_stack, .tech_stack_java{
     width: 50px;
     height: 50px;
-    background-color: #f0f0f0;
+    background-color: white;
+    border: 1px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,7 +274,8 @@ button:hover{
     width: 50%;
     margin-right: 10%;
     letter-spacing: 1px;
-    font-size: 20px;font-weight: 200;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
     font-weight: 200;
     opacity: .9;
 }
@@ -289,6 +294,7 @@ button:hover{
     font-size: 50px;
     border-left: rgb(202, 82, 82) 4px solid;
     padding-left: 10px;
+    font-family: 'Varela Round', sans-serif;
 }
 
 
@@ -408,6 +414,7 @@ button:hover{
     font-size: 50px;
     border-left: rgb(202, 82, 82) 4px solid;
     padding-left: 10px;
+    font-family: 'Varela Round', sans-serif
 }
 
 .services-container{
@@ -436,9 +443,9 @@ button:hover{
 .services-container p{
 
     font-size: .85rem;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 1px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
   
 }
 .services-container h2 img{
@@ -446,19 +453,6 @@ button:hover{
     align-items: center;
     overflow: hidden;
 }
-.service_more{
-    margin-top: 30px;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 100px;
-}
-.service_more span{
-    text-decoration: underline;
-    color: rgb(202, 82, 82);
-}
-
 .contact_section{
     margin-left: 1em;
     display: flex;
@@ -468,20 +462,42 @@ button:hover{
     padding-top: 250px;
     flex-wrap: wrap;
     width: 80%;
+
+
 }
+.service_more h3{
+    margin-top: 30px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 100px;
+    font-weight: 300;
+
+}
+.service_more h3 span a{
+    text-decoration: underline;
+    color: rgb(202, 82, 82);
+}
+
+
 
 .socialmedia_footer{
     display: flex;
     flex-direction: row;
     font-size: .8rem;
     margin-top: -100px;
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 1px;
     margin-bottom: 500px;
-
+    font-family: 'Poppins', sans-serif;
+}
+.socialmedia_footer h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
 }
 .socialmedia_footer i{
-    margin-top: 15px;
+    margin-top:17px;
 }
 
 @media screen and (max-width:1020px) {
@@ -533,6 +549,7 @@ button:hover{
         width: 100%;
         margin-top: -.5em;
         letter-spacing: 1px;
+        font-family: 'Poppins', sans-serif;
     
     }
     
@@ -691,6 +708,7 @@ button:hover{
         width: 90%;
         align-items: center;
         justify-content: center;
+
     }
     
     .socialmedia_footer{
@@ -712,7 +730,7 @@ button:hover{
         margin-top: 30px;
         font-size: 1rem;
         letter-spacing: 1px;
-        font-weight: 500;
+  
         font-family: 'Poppins', sans-serif;
         margin-bottom: 100px;
       
@@ -821,6 +839,7 @@ button:hover{
         margin-bottom: 30px;
         letter-spacing: 1px;
         font-size: 1.2rem;
+        font-family: 'Poppins', sans-serif;
     }
     .home_links{
         margin-top: .7rem;
@@ -874,6 +893,7 @@ button:hover{
         font-size: 1.2rem;
         width: 100%;
         text-align: center;
+        font-family: 'Poppins', sans-serif;
    
     }
     .about_section-title span{
@@ -991,7 +1011,7 @@ button:hover{
         margin-top: 30px;
         font-size: .8rem;
         letter-spacing: 1px;
-        font-weight: 500;
+   
         font-family: 'Poppins', sans-serif;
         margin-bottom: 100px;
         width: 90%;
