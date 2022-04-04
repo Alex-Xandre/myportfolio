@@ -18,9 +18,11 @@ import stack_java from '../../images/java.png'
 import proj1 from '../../images/proj1.png'
 import proj2 from '../../images/barkmeoww.png'
 import proj3 from '../../images/halingoo.png'
+import proj4 from '../../images/proj4.png'
 import check from '../../images/checked.png'
 import Aos from 'aos'
 import "aos/dist/aos.css"
+
 
 
 
@@ -37,12 +39,10 @@ const Home = () => {
   }, [])
 
   const [theme,setTheme] = useState("light")
-  const [clicked,setClicked] = useState(false)
+  const [clicked,setClicked] = useState(true)
 
   //projects
-  const [style, setStyle] = useState({display: 'none'});
-  const [style2, setStyle2] = useState({display: 'none'});
-  const [style3, setStyle3] = useState({display: 'none'});
+ 
    
   const themeToggler =() =>{
   theme === "light" ? setTheme("dark"): setTheme("light")
@@ -87,8 +87,8 @@ const Home = () => {
 
         <div className='home_links'>
          
-          <i onClick={() => themeToggler()} className={theme ==='dark' ?  'fa-solid fa-lightbulb': 'fa-solid fa-moon' }></i>
-        </div>
+        <i onClick={() => themeToggler()} className={theme ==='dark' ?  'fa-solid fa-lightbulb': 'fa-solid fa-moon' }></i>
+       </div>
 
        </nav>
 
@@ -108,8 +108,9 @@ const Home = () => {
         
             <h2 className='home_section_description'>A Developer who is eager to learn and explore more on technology stuffs.</h2>
             {/* <button className='home_section_button1'>Hire A FreeLancer</button> */}
-           <a href="https://www.linkedin.com/in/alexander-micua-04657a217/" target="_blank" rel='noreferrer'> <button className='home_section_button2'>Hire A FreeLancer</button> </a> 
+           <a href="https://www.linkedin.com/in/alexander-micua-04657a217/" target="_blank" rel='noreferrer'> <button className='btn home_section_button2'>Hire A FreeLancer</button> </a> 
             </div>
+           
             <img src={home_img} className="home_section_bg" alt='photoss' />
  
         </section >
@@ -145,20 +146,22 @@ const Home = () => {
                     <br/>
                         Things that I am currently studying: #<strong>Web Development</strong>, #<strong>UI/UX Design</strong>, #<strong>Trading</strong>, #<strong>Web3</strong>, #<strong>VA</strong>, #<strong>Japanese Culture</strong>
                     </p>
-                <div className='about_section-techstack' data-aos ="fade-left">
-                    <h2 className='about_section_techstack-title'>
+                <div className='about_section-techstack' >
+                    <h2 className='about_section_techstack-title' data-aos ="fade-up">
                         Technology Stacks
                     </h2>
 
                     <div className='tech_stack_container'>
-                        <div className='tech_stack'><img src={stack_android} alt="skils"/></div>
-                        <div className='tech_stack_java'><img src={stack_java} alt="skils"/></div>
-                        <div className='tech_stack'><img src={stack_mongo} alt="skils"/></div>
-                        <div className='tech_stack'><img src={stack_mysql} alt="skils"/></div>
-                        <div className='tech_stack'><img src={stack_node} alt="skils"/></div>
-                        <div className='tech_stack'><img src={stack_react} alt="skils"/></div>
-                 
+               
+                        <div className='tech_stack' data-aos ="fade-right"><img src={stack_android} alt="skils" /></div>
+                        <div className='tech_stack_java' data-aos ="fade-right"><img src={stack_java} alt="skils" /></div>
+                        <div className='tech_stack' data-aos ="fade-right"><img src={stack_mongo} alt="skils" /></div>
+                        <div className='tech_stack' data-aos ="fade-right"><img src={stack_mysql} alt="skils"/></div>
+                        <div className='tech_stack' data-aos ="fade-right"><img src={stack_node} alt="skils"/></div>
+                        <div className='tech_stack' data-aos ="fade-right"><img src={stack_react} alt="skils"/></div>
+                        
                     </div> 
+                    
                 </div>
             </div>
         </section>
@@ -181,43 +184,43 @@ const Home = () => {
 
         <div className='project_main-container'>
         
-            <div className='project' onMouseLeave={e => {setStyle({display: 'none'})}} data-aos ="fade-right">    
-                <img src={proj1} alt="project1" onMouseEnter={e => {setStyle({display: 'block'})}}  />
-
-                <div style={style} className="show_project">  
+            <div className='project' data-aos ="fade-right">    
+                <img src={proj1} alt="project1"  />
+                     <div className="overlay overlayLeft">  
                 <h1>Xcryptaces </h1>
-                <h2>A mentoring website about trading</h2>
-                <a href='https://xcryptaces.com' target='_blank'rel="noreferrer">Visit Link: <span>https://xcryptaces.com </span></a>
-             
+                <h2>Tech Stack used: <span>React, Node, MongoDb, SCSS</span></h2>
+                <button className='btn_mr'>Show more Details</button>
                 </div>
-
             </div>
 
-           
-
-            <div className='project' onMouseLeave={e => {setStyle3({display: 'none'})}} data-aos ="fade-down">    
-                <img src={proj3} alt="project1" onMouseEnter={e => {setStyle3({display: 'block'})}}  />
-
-                <div style={style3} className="show_project">  
-                <h1>Halingo</h1>
-                <h2>Added blog/post/search/profile features</h2>
-                <a href='https://www.halingo.be/' target='_blank'rel="noreferrer"> Visit Link: <span>https://www.halingo.be/</span></a>
-             
+            <div className='project' data-aos ="fade-left">    
+                <img src={proj3} alt="project1"  />
+                     <div className="overlay overlayLeft">  
+                     <h1>Halingo</h1>
+                <h2>Tech Stack used: <span>React, Node, MongoDb, Material UI, CSS, NX</span></h2>
+                <button className='btn_mr'>Show more Details</button>
                 </div>
-
             </div>
 
-            <div className='project' onMouseLeave={e => {setStyle2({display: 'none'})}} data-aos ="fade-left">    
-                <img src={proj2} alt="project1" onMouseEnter={e => {setStyle2({display: 'block'})}}  />
 
-                <div style={style2} className="show_project">  
-                <h1>BarkMeow Heroes</h1>
-                <h2>NFT Website</h2>
-                <a href='https://barkmeowheroeshq.com/' target='_blank'rel="noreferrer"> Visit Link: <span>https://barkmeowheroeshq.com/</span></a>
-             
+            <div className='project' data-aos ="fade-right">    
+                <img src={proj2} alt="project1"  />
+                     <div className="overlay overlayLeft">  
+                     <h1>BarkMeow Heroes</h1>
+                <h2>Tech Stack used: <span>React, HTML, CSS</span></h2>
+                <button className='btn_mr'>Show more Details</button>
                 </div>
-
             </div>
+
+            <div className='project' data-aos ="fade-left">    
+                <img src={proj4} alt="project1"  />
+                     <div className="overlay overlayLeft">  
+                     <h1>This Website</h1>
+                <h2>Tech Stack used: <span>React, HTML, CSS3, JQuery</span></h2>
+               
+                </div>
+            </div>
+  
 
         </div>
 
@@ -317,8 +320,10 @@ const Home = () => {
 
         
        
-
+     
        
+    
+        
 
        </div>
     
