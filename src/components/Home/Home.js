@@ -74,7 +74,7 @@ const Home = () => {
         <MessengerCustomerChat
         pageId="104959258728460"
         appId="2837583293208170"
-        
+        minimized="true"
     />
     
       
