@@ -9,12 +9,18 @@ import {Link} from 'react-scroll'
 import Typewriter from "typewriter-effect";
 
 import home_img from '../../images/main-image.png'
-import stack_react from '../../images/react.png'
-import stack_node from '../../images/nodejs.png'
-import stack_mysql from '../../images/mysql.png'
-import stack_mongo from '../../images/mongodb.png'
-import stack_android from '../../images/android.png'
-import stack_java from '../../images/java.png'
+import stack_react from '../../images/icon_react.png'
+import stack_node from '../../images/icon_nodejs.png'
+import stack_mysql from '../../images/icon_mysql.png'
+import stack_mongo from '../../images/icon_mongodb.png'
+import stack_android from '../../images/icon_android.png'
+import stack_java from '../../images/icon_java.png'
+import stack_html from '../../images/icon_html.png'
+import stack_css from '../../images/icon_css.png'
+import stack_sass from '../../images/icon_sass.png'
+
+
+
 import proj1 from '../../images/proj1.png'
 import proj2 from '../../images/barkmeoww.png'
 import proj3 from '../../images/halingoo.png'
@@ -23,6 +29,7 @@ import check from '../../images/checked.png'
 import Aos from 'aos'
 import "aos/dist/aos.css"
 
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 
 
@@ -38,15 +45,15 @@ const Home = () => {
       Aos.refresh()
   }, [])
 
-  const [theme,setTheme] = useState("light")
+  const [theme] = useState("light")
   const [clicked,setClicked] = useState(true)
 
   //projects
  
    
-  const themeToggler =() =>{
-  theme === "light" ? setTheme("dark"): setTheme("light")
-  }
+//   const themeToggler =() =>{
+//   theme === "light" ? setTheme("dark"): setTheme("light")
+//   }
 
   const handleClick =() =>{
    clicked === false ? setClicked(true): setClicked(false)
@@ -64,6 +71,12 @@ const Home = () => {
        <StyledApp>
        <div className='home'>
 
+        <MessengerCustomerChat
+        pageId="104959258728460"
+        appId="2837583293208170"
+        
+    />
+    
       
        <nav className='NavbarItems'>
           <h1 className='navbar-logo'> Alexander Micua</h1>
@@ -87,7 +100,7 @@ const Home = () => {
 
         <div className='home_links'>
          
-        <i onClick={() => themeToggler()} className={theme ==='dark' ?  'fa-solid fa-lightbulb': 'fa-solid fa-moon' }></i>
+        {/* <i onClick={() => themeToggler()} className={theme ==='dark' ?  'fa-solid fa-lightbulb': 'fa-solid fa-moon' }></i> */}
        </div>
 
        </nav>
@@ -118,7 +131,7 @@ const Home = () => {
       
         <section className='about_section'  id="about" data-aos ="fade-up" >
             
-            <h1 className='about_section-title' data-aos ="fade-up"> 
+            <h1 className='about_section-title' data-aos ="fade-up" style={{opacity:'.3'}}> 
 
             <Typewriter
 
@@ -138,23 +151,25 @@ const Home = () => {
             
             <div className='about_section_content-container'>
             <p className='about_section-content ' data-aos ="fade-right">
-                Currently living in Luna, La Union. I am a graduating student of Computer Science from STI Colleges and I've work on 
-                    projects including websites, android application, full-stack software development and tutoring.
+                A 22 year old programmer that worked on 
+                    projects including creation of websites, android application, full-stack software development; moderating discord and editing short videos; and tutoring.
                     <br/><br/>
-                    As of now one of my best project is the website of xcrypt aces wherein it is a trading mentoring program to almost 600 students. Ive join some competitions and hackatons as well as accepting thesis projects and also freelancing.
+                    Nothing is impossible in Programming as long as you believe in yourself and you know the logic and undamentals of the system
                     <br/>
                     <br/>
                         Things that I am currently studying: #<strong>Web Development</strong>, #<strong>UI/UX Design</strong>, #<strong>Trading</strong>, #<strong>Web3</strong>, #<strong>VA</strong>, #<strong>Japanese Culture</strong>
                     </p>
-                <div className='about_section-techstack' >
-                    <h2 className='about_section_techstack-title' data-aos ="fade-up">
+                <div className='about_section-techstack' data-aos ="fade-up">
+                    <h2 className='about_section_techstack-title' >
                         Technology Stacks
                     </h2>
 
                     <div className='tech_stack_container'>
-               
+                        <div className='tech_stack' data-aos ="fade-right"><img src={stack_html} alt="skils" /></div>
+                        <div className='tech_stack' data-aos ="fade-right"><img src={stack_css} alt="skils" /></div>
+                        <div className='tech_stack' data-aos ="fade-right"><img src={stack_sass} alt="skils" /></div>
                         <div className='tech_stack' data-aos ="fade-right"><img src={stack_android} alt="skils" /></div>
-                        <div className='tech_stack_java' data-aos ="fade-right"><img src={stack_java} alt="skils" /></div>
+                        <div className='tech_stack' data-aos ="fade-right"><img src={stack_java} alt="skils" /></div>
                         <div className='tech_stack' data-aos ="fade-right"><img src={stack_mongo} alt="skils" /></div>
                         <div className='tech_stack' data-aos ="fade-right"><img src={stack_mysql} alt="skils"/></div>
                         <div className='tech_stack' data-aos ="fade-right"><img src={stack_node} alt="skils"/></div>
@@ -167,7 +182,7 @@ const Home = () => {
         </section>
 
         <section className='project_section'   id = 'projects'>
-        <h1 className='about_project-title'  data-aos ="fade-up"> 
+        <h1 className='about_project-title'  data-aos ="fade-up" style={{opacity:'.3'}}> 
         <Typewriter
 
                     onInit={(typewriter)=> {
@@ -188,8 +203,9 @@ const Home = () => {
                 <img src={proj1} alt="project1"  />
                      <div className="overlay overlayLeft">  
                 <h1>Xcryptaces </h1>
+                <h2>Mentoring Website of Xcrypt Aces</h2>
                 <h2>Tech Stack used: <span>React, Node, MongoDb, SCSS</span></h2>
-                <button className='btn_mr'>Show more Details</button>
+                <button className='btn_mr'><a href='https://xcryptaces.com' target="_blank" rel='noreferrer'>Visit Website to new tab</a></button>
                 </div>
             </div>
 
@@ -197,8 +213,9 @@ const Home = () => {
                 <img src={proj3} alt="project1"  />
                      <div className="overlay overlayLeft">  
                      <h1>Halingo</h1>
+                     <h2>Implemented Post, Profile, Blog Features</h2>
                 <h2>Tech Stack used: <span>React, Node, MongoDb, Material UI, CSS, NX</span></h2>
-                <button className='btn_mr'>Show more Details</button>
+                <button className='btn_mr'><a href='https://halingo.be' target="_blank" rel='noreferrer'>Visit Website to new tab</a></button>
                 </div>
             </div>
 
@@ -206,9 +223,11 @@ const Home = () => {
             <div className='project' data-aos ="fade-right">    
                 <img src={proj2} alt="project1"  />
                      <div className="overlay overlayLeft">  
+                   
                      <h1>BarkMeow Heroes</h1>
+                     <h2>NFT Landing Page</h2>
                 <h2>Tech Stack used: <span>React, HTML, CSS</span></h2>
-                <button className='btn_mr'>Show more Details</button>
+                <button className='btn_mr'><a href='https://barkmeowheroeshq.com' target="_blank" rel='noreferrer'>Visit Website to new tab</a></button>
                 </div>
             </div>
 
@@ -216,8 +235,9 @@ const Home = () => {
                 <img src={proj4} alt="project1"  />
                      <div className="overlay overlayLeft">  
                      <h1>This Website</h1>
+                     <h2>MY Website</h2>
                 <h2>Tech Stack used: <span>React, HTML, CSS3, JQuery</span></h2>
-               
+                <button className='btn_mr'> <a href='https://github.com/Alex-Xandre/myportfolio' target="_blank" rel='noreferrer'>Visit Github Repisotory</a></button>
                 </div>
             </div>
   
@@ -227,8 +247,8 @@ const Home = () => {
         
         </section>
 
-        <section className='services_section'  id = 'service'>
-        <h1 className='services-title' data-aos ="fade-up"> 
+        <section className='services_section'  id = 'service' >
+        <h1 className='services-title' data-aos ="fade-up" style={{opacity:'.3'}}> 
 
 <Typewriter
 
@@ -243,48 +263,61 @@ const Home = () => {
 
         />
  </h1>
-        
-        <div className='services-container' data-aos ="fade-up">
-        <img src={check} alt='check icon'/>
-            <h2>Web development</h2>
-            <p> <span></span>Modify/ Create a Full stack Web App </p>
-        </div>
-        <div className='services-container' data-aos ="fade-up">
-        <img src={check} alt='check icon'/>
-            <h2>Web Design</h2>
-            <p>Create a Website design</p>
-        </div>
-        <div className='services-container' data-aos ="fade-up">
-        <img src={check} alt='check icon'/>
-            <h2>Mobile App Development</h2>
-            <p>Implement a full stack mobile app</p>
-        </div>
+      
+            <div className='services-container' data-aos ="fade-up" >
+            <img src={check} alt='check icon'/>
+                <h2>Full Stack Web development</h2>
+                <p> <span></span>Modify/ Create a Full stack Web App </p>
+            </div>
+            <div className='services-container'data-aos ="fade-up" >
+            <img src={check} alt='check icon'/>
+                <h2>Front End development</h2>
+                <p> <span></span>Modify/ Create a Front End Website </p>
+            </div>
+            <div className='services-container'data-aos ="fade-up" >
+            <img src={check} alt='check icon'/>
+                <h2>Back End development</h2>
+                <p> <span></span>Modify/ Create a Backend of a Website </p>
+            </div>
+            <div className='services-container'data-aos ="fade-up" >
+            <img src={check} alt='check icon'/>
+                <h2>Web Design</h2>
+                <p>Create a Website design</p>
+            </div>
+            <div className='services-container'data-aos ="fade-up" >
+            <img src={check} alt='check icon'/>
+                <h2>Mobile App Development</h2>
+                <p>Implement a full stack mobile app</p>
+            </div>
 
-        <div className='services-container' data-aos ="fade-up">
-        <img src={check} alt='check icon'/>
-            <h2>Software Development</h2>
-            <p>Software Development using Java</p>
-        </div>
+            <div className='services-container'data-aos ="fade-up" >
+            <img src={check} alt='check icon'/>
+                <h2>Software Development</h2>
+                <p>Software Development using Java</p>
+            </div>
 
-        <div className='services-container' data-aos ="fade-up">
-        <img src={check} alt='check icon'/>
-            <h2>Discord Moderator</h2>
-            <p>Be a moderator to a discord channel</p>
-        </div>
+            <div className='services-container' data-aos ="fade-up">
+            <img src={check} alt='check icon'/>
+                <h2>Discord Moderator</h2>
+                <p>Be a moderator to a discord channel</p>
+            </div>
+            
+            <div className='services-container'data-aos ="fade-up">
+            <img src={check} alt='check icon'/>
+                <h2>Video Editing</h2>
+                <p>Edit short videos for Blogs</p>
+            </div>
+     
+       
 
 
 
-        <div className='services-container' data-aos ="fade-up">
-        <img src={check} alt='check icon'/>
-            <h2>Video Editing</h2>
-            <p>Edit short videos for Blogs</p>
-        </div>
 
        
         </section>
 
-        <section className='contact_section'   id = 'contact'> 
-        <h1 className='services-title'  data-aos ="fade-up"> 
+        <section className='contact_section'   id = 'contact' > 
+        <h1 className='services-title'  data-aos ="fade-up" style={{opacity:'.3'}}> 
 
 <Typewriter
 
@@ -292,7 +325,7 @@ const Home = () => {
 
         typewriter
 
-        .typeString("Contact")
+        .typeString("Contact Me")
         .start()
         .pauseFor(300)
         }}
@@ -300,8 +333,8 @@ const Home = () => {
         />
  </h1>
 
-        <div className='service_more'  data-aos ="fade-left">
-            <h3>Interested to know more or a collab? Feel Free to contact me on <span>    <a href="https://web.facebook.com/xander.micua.9" target="_blank" rel='noreferrer'>Facebook</a> </span></h3>
+        <div className='service_more'  data-aos ="fade-left" >
+            <h3 style={{fontWeight:'500'}}>Get in touch and let us discuss the project you have in mind on <span>    <a href="https://web.facebook.com/xander.micua.9" target="_blank" rel='noreferrer'>Facebook</a> </span> </h3>
         </div>
 
         <div className='socialmedia_footer' data-aos ="fade-left">
@@ -317,13 +350,6 @@ const Home = () => {
 
             <p style={{letterSpacing:'1px'}}>Made with React by Alex with ♡♡♡<br/><span>  All Right Reserve 2021</span></p>
         </section>
-
-        
-       
-     
-       
-    
-        
 
        </div>
     
