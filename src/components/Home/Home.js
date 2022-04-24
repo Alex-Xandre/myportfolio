@@ -154,7 +154,7 @@ const Home = () => {
                 A 22 year old programmer that worked on 
                     projects including creation of websites, android application, full-stack software development; moderating discord and editing short videos; and tutoring.
                     <br/><br/>
-                    Nothing is impossible in Programming as long as you believe in yourself and you know the logic and undamentals of the system
+                    Nothing is impossible in Programming as long as you believe in yourself and you know the logic and fundamentals of the system
                     <br/>
                     <br/>
                         Things that I am currently studying: #<strong>Web Development</strong>, #<strong>UI/UX Design</strong>, #<strong>Trading</strong>, #<strong>Web3</strong>, #<strong>VA</strong>, #<strong>Japanese Culture</strong>
