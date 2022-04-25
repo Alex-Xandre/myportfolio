@@ -90,7 +90,7 @@ const Home = () => {
             {MenuItems.map((item, index)=> {
                 return(
                     <li key ={index}>
-                        <Link to={item.url} activeClass="activelink" spy={true} smooth={true} offset={100} duration={500} delay={10} className={item.cName}>
+                        <Link to={item.url} activeClass="activelink" spy={true} smooth={true} offset={100} duration={500} delay={10} className={item.cName} onClick ={()=> handleClick()}>
                         {item.title}
                         </Link>
                     </li>
