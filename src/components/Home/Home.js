@@ -229,7 +229,7 @@ const Home = () => {
                      <h1>BarkMeow Heroes</h1>
                      <h2>NFT Landing Page</h2>
                 <h2>Tech Stack used: <span>React, HTML, CSS</span></h2>
-                <button className='btn_mr'><a href='https://bark-meow-heroes.vercel.app/' target="_blank" rel='noreferrer'>Visit Website to new tab</a></button>
+                <button className='btn_mr'><a href='https://www.barkmeowheroeshq.com/' target="_blank" rel='noreferrer'>Visit Website to new tab</a></button>
                 </div>
             </div>
 
