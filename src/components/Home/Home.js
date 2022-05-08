@@ -121,6 +121,7 @@ const Home = () => {
         
             <h2 className='home_section_description'>A Developer who is eager to learn and explore more on technology stuffs.</h2>
             {/* <button className='home_section_button1'>Hire A FreeLancer</button> */}
+            
            <a href="https://www.linkedin.com/in/alexander-micua-04657a217/" target="_blank" rel='noreferrer'> <button className='btn home_section_button2'>Hire A FreeLancer</button> </a> 
             </div>
            
@@ -196,7 +197,8 @@ const Home = () => {
                     />
         
         </h1>
-
+        <h2 className='about_section-description' data-aos ="fade-up" >Hello! Here are some of my works</h2>
+            
         <div className='project_main-container'>
         
             <div className='project' data-aos ="fade-right">    
@@ -227,7 +229,7 @@ const Home = () => {
                      <h1>BarkMeow Heroes</h1>
                      <h2>NFT Landing Page</h2>
                 <h2>Tech Stack used: <span>React, HTML, CSS</span></h2>
-                <button className='btn_mr'><a href='https://barkmeowheroeshq.com' target="_blank" rel='noreferrer'>Visit Website to new tab</a></button>
+                <button className='btn_mr'><a href='https://bark-meow-heroes.vercel.app/' target="_blank" rel='noreferrer'>Visit Website to new tab</a></button>
                 </div>
             </div>
 
@@ -249,8 +251,8 @@ const Home = () => {
 
         <section className='services_section'  id = 'service' >
         <h1 className='services-title' data-aos ="fade-up" style={{opacity:'.3'}}> 
-
-<Typewriter
+       
+        <Typewriter
 
         onInit={(typewriter)=> {
 
@@ -263,6 +265,10 @@ const Home = () => {
 
         />
  </h1>
+
+ <h2 className='about_section-description' data-aos ="fade-up" >Services I have Offered</h2>
+           
+
       
             <div className='services-container' data-aos ="fade-up" >
             <img src={check} alt='check icon'/>
