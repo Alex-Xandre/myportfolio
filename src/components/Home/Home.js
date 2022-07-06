@@ -23,8 +23,9 @@ import stack_sass from '../../images/icon_sass.png'
 
 import proj1 from '../../images/proj1.png'
 import proj2 from '../../images/barkmeoww.png'
-import proj3 from '../../images/halingoo.png'
+import proj3 from '../../images/proj2.png'
 import proj4 from '../../images/proj4.png'
+import proj5 from '../../images/proj5.png'
 import check from '../../images/checked.png'
 import Aos from 'aos'
 import "aos/dist/aos.css"
@@ -204,10 +205,10 @@ const Home = () => {
             <div className='project' data-aos ="fade-right">    
                 <img src={proj1} alt="project1"  />
                      <div className="overlay overlayLeft">  
-                <h1>Xcryptaces </h1>
-                <h2>Mentoring Website of Xcrypt Aces</h2>
+                <h1>Xcryptaces Website</h1>
+                <h2>Xcrypt Aces is a mentoring website for crypto currency trading which help over 600 students to improve their trading skills</h2>
                 <h2>Tech Stack used: <span>React, Node, MongoDb, SCSS</span></h2>
-                <button className='btn_mr'><a href='https://xcryptaces.com' target="_blank" rel='noreferrer'>Visit Website to new tab</a></button>
+                <button className='btn_mr'><a href='https://xcryptaces.com' target="_blank" rel='noreferrer'>Visit Website</a></button>
                 </div>
             </div>
 
@@ -215,9 +216,9 @@ const Home = () => {
                 <img src={proj3} alt="project1"  />
                      <div className="overlay overlayLeft">  
                      <h1>Halingo</h1>
-                     <h2>Implemented Post, Profile, Blog Features</h2>
+                     <h2>Implemented some admin features on the system and profile feature. Halingo is an administrative tool for speech therapist.</h2>
                 <h2>Tech Stack used: <span>React, Node, MongoDb, Material UI, CSS, NX</span></h2>
-                <button className='btn_mr'><a href='https://halingo.be' target="_blank" rel='noreferrer'>Visit Website to new tab</a></button>
+                <button className='btn_mr'><a href='https://halingo.be' target="_blank" rel='noreferrer'>Visit Website</a></button>
                 </div>
             </div>
 
@@ -227,9 +228,9 @@ const Home = () => {
                      <div className="overlay overlayLeft">  
                    
                      <h1>BarkMeow Heroes</h1>
-                     <h2>NFT Landing Page</h2>
+                     <h2>Develop a website for Barkmeow a NFT project based on California</h2>
                 <h2>Tech Stack used: <span>React, HTML, CSS</span></h2>
-                <button className='btn_mr'><a href='https://www.barkmeowheroeshq.com/' target="_blank" rel='noreferrer'>Visit Website to new tab</a></button>
+                <button className='btn_mr'><a href='https://www.barkmeowheroeshq.com/' target="_blank" rel='noreferrer'>Visit Website </a></button>
                 </div>
             </div>
 
@@ -237,12 +238,21 @@ const Home = () => {
                 <img src={proj4} alt="project1"  />
                      <div className="overlay overlayLeft">  
                      <h1>This Website</h1>
-                     <h2>MY Website</h2>
+                     <h2>My Website</h2>
                 <h2>Tech Stack used: <span>React, HTML, CSS3, JQuery</span></h2>
-                <button className='btn_mr'> <a href='https://github.com/Alex-Xandre/myportfolio' target="_blank" rel='noreferrer'>Visit Github Repisotory</a></button>
+                <button className='btn_mr'> <a href='https://github.com/Alex-Xandre/myportfolio' target="_blank" rel='noreferrer'>View Github Repisotory</a></button>
                 </div>
             </div>
   
+            <div className='project' data-aos ="fade-left">    
+                <img src={proj5} alt="project1"  />
+                     <div className="overlay overlayLeft">  
+                     <h1>E Learning Website</h1>
+                     <h2>E Learning WEbsite for Bacnotan national highschool</h2>
+                <h2>Tech Stack used: <span>React, HTML, CSS3, JQuery</span></h2>
+                <button className='btn_mr'> <a href='https://elms-bnhs.herokuapp.com/' target="_blank" rel='noreferrer'>View Site</a></button>
+                </div>
+            </div>
 
         </div>
 
@@ -264,12 +274,10 @@ const Home = () => {
         }}
 
         />
- </h1>
+        </h1>
 
- <h2 className='about_section-description' data-aos ="fade-up" >Services I have Offered</h2>
-           
-
-      
+    <h2 className='service_section-description' data-aos ="fade-up" >Services I have Offered</h2>
+        
             <div className='services-container' data-aos ="fade-up" >
             <img src={check} alt='check icon'/>
                 <h2>Full Stack Web development</h2>
