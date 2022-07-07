@@ -48,9 +48,6 @@ const Home = () => {
 
   const [theme] = useState("light")
   const [clicked,setClicked] = useState(true)
-
-  //projects
- 
    
 //   const themeToggler =() =>{
 //   theme === "light" ? setTheme("dark"): setTheme("light")
@@ -60,13 +57,8 @@ const Home = () => {
    clicked === false ? setClicked(true): setClicked(false)
 }
 
-
-
-
-
   return (
  
-      
     <ThemeProvider theme={theme === "light"? lightTheme: darkTheme}>
     <GlobalStyles/>
        <StyledApp>
@@ -77,8 +69,6 @@ const Home = () => {
         appId="2837583293208170"
         minimized="true"
     />
-    
-      
        <nav className='NavbarItems'>
           <h1 className='navbar-logo'> Alexander Micua</h1>
         
@@ -199,12 +189,17 @@ const Home = () => {
         
         </h1>
         <h2 className='about_section-description' data-aos ="fade-up" >Hello! Here are some of my works</h2>
-            
+        {
+        /* <div className='project_type_show'>
+        <button>All</button>
+        <button>All</button>
+        <button>All</button>
+        </div> */}
         <div className='project_main-container'>
         
             <div className='project' data-aos ="fade-right">    
                 <img src={proj1} alt="project1"  />
-                     <div className="overlay overlayLeft">  
+                <div className="overlay overlayLeft">  
                 <h1>Xcryptaces Website</h1>
                 <h2>Xcrypt Aces is a mentoring website for crypto currency trading which help over 600 students to improve their trading skills</h2>
                 <h2>Tech Stack used: <span>React, Node, MongoDb, SCSS</span></h2>
@@ -248,8 +243,8 @@ const Home = () => {
                 <img src={proj5} alt="project1"  />
                      <div className="overlay overlayLeft">  
                      <h1>E Learning Website</h1>
-                     <h2>E Learning WEbsite for Bacnotan national highschool</h2>
-                <h2>Tech Stack used: <span>React, HTML, CSS3, JQuery</span></h2>
+                     <h2>E Learning Website for Bacnotan national highschool</h2>
+                <h2>Tech Stack used: <span>React, HTML, CSS3, Bootstrap</span></h2>
                 <button className='btn_mr'> <a href='https://elms-bnhs.herokuapp.com/' target="_blank" rel='noreferrer'>View Site</a></button>
                 </div>
             </div>
@@ -298,16 +293,11 @@ const Home = () => {
                 <h2>Web Design</h2>
                 <p>Create a Website design</p>
             </div>
-            <div className='services-container'data-aos ="fade-up" >
-            <img src={check} alt='check icon'/>
-                <h2>Mobile App Development</h2>
-                <p>Implement a full stack mobile app</p>
-            </div>
 
             <div className='services-container'data-aos ="fade-up" >
             <img src={check} alt='check icon'/>
                 <h2>Software Development</h2>
-                <p>Software Development using Java</p>
+                <p>Software Development using Java/C#</p>
             </div>
 
             <div className='services-container' data-aos ="fade-up">
